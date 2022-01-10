@@ -66,7 +66,6 @@ namespace WindowsFormsApp1.Views
             this.customersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter1 = new WindowsFormsApp1.OrdersCustomersNewTableAdapters.CustomersTableAdapter();
             this.tableAdapterManager3 = new WindowsFormsApp1.OrdersCustomersNewTableAdapters.TableAdapterManager();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label_Time = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -97,6 +96,7 @@ namespace WindowsFormsApp1.Views
             this.ordersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             orderDateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clothingStoreDBDataSet7)).BeginInit();
@@ -110,7 +110,6 @@ namespace WindowsFormsApp1.Views
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersCustomersNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -126,6 +125,7 @@ namespace WindowsFormsApp1.Views
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // orderDateLabel
@@ -399,21 +399,6 @@ namespace WindowsFormsApp1.Views
             this.tableAdapterManager3.CustomersTableAdapter = this.customersTableAdapter1;
             this.tableAdapterManager3.OrdersTableAdapter = null;
             this.tableAdapterManager3.UpdateOrder = WindowsFormsApp1.OrdersCustomersNewTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ScrollBar;
-            this.dataGridView1.Location = new System.Drawing.Point(153, 211);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(827, 321);
-            this.dataGridView1.TabIndex = 67;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellDoubleClickEvent);
             // 
             // label_Time
             // 
@@ -716,6 +701,21 @@ namespace WindowsFormsApp1.Views
             this.label5.TabIndex = 84;
             this.label5.Text = "*Type duoble click on any row on table for display products details ";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ScrollBar;
+            this.dataGridView1.Location = new System.Drawing.Point(153, 211);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(827, 321);
+            this.dataGridView1.TabIndex = 67;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellDoubleClickEvent);
+            // 
             // OrdersListScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -765,7 +765,6 @@ namespace WindowsFormsApp1.Views
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersCustomersNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -782,6 +781,7 @@ namespace WindowsFormsApp1.Views
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -826,7 +826,6 @@ namespace WindowsFormsApp1.Views
         private System.Windows.Forms.BindingSource customersBindingSource1;
         private OrdersCustomersNewTableAdapters.CustomersTableAdapter customersTableAdapter1;
         private OrdersCustomersNewTableAdapters.TableAdapterManager tableAdapterManager3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label_Time;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -854,5 +853,6 @@ namespace WindowsFormsApp1.Views
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

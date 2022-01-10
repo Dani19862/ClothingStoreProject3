@@ -20,6 +20,8 @@ namespace WindowsFormsApp1.Views
 
         private void OrdersListScreen_Load(object sender, EventArgs e)
         {
+          
+           
             DateTime dateTime = DateTime.Now;
             this.label_Time.Text = dateTime.ToString("dddd, dd MMMM yyyy HH:mm:ss");
         }
@@ -157,18 +159,18 @@ namespace WindowsFormsApp1.Views
         private async void SearchDate_btn_Click(object sender, EventArgs e)
         {
             txtBox_Search.Text = "";
-            dataGridView1.DataSource = await or.GetAllOrdersAsync();
+            dataGridView1.DataSource =await  or.GetAllOrdersAsync();
             dataGridView1.DataSource = OrderRepositorySingelton.OrderByDate(Convert.ToDateTime(fromDate_txtBox.Text), Convert.ToDateTime(toDate_txtBox.Text));
         }
 
 
         // Free Order Search 
-        private async void TextBoxSearch_TextChanged(object sender, EventArgs e)
+        private async  void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
             List<OrderCustomer> loc = new List<OrderCustomer>();
             if (string.IsNullOrEmpty(textBoxSearch.Text) == false)
             {
-                var list_c = await or.GetAllOrdersAsync();
+                var list_c =await  or.GetAllOrdersAsync();
 
                 foreach (var oc in list_c)
                 {

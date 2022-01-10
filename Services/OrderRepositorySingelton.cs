@@ -161,7 +161,7 @@ namespace Services
         }
 
         //Get All Records
-        public async Task<List<OrderCustomer>> GetAllOrdersAsync()
+        public async Task <List<OrderCustomer>> GetAllOrdersAsync()
         {
 
             var a = (from o in db.Orders
@@ -183,12 +183,12 @@ namespace Services
                          No_House = c.No_House,
                          PhoneNumber = c.PhoneNumber,
                          PostalCode = c.PostalCode,
-                         ProductsQuantity = o.ProductsQuantity
+                         ProductsQuantity = o.ProductsQuantity,
+                                                     
 
                      }).ToListAsync();
 
-            var b = await a;
-            return b;
+            return await a;
         }
 
         // sort rows by OrderId 

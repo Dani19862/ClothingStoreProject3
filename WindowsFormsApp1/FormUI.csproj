@@ -791,7 +791,6 @@
     <None Include="ProductsNew.xss">
       <DependentUpon>ProductsNew.xsd</DependentUpon>
     </None>
-    <None Include="Properties\DataSources\Orders.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.DataAccssesLayer.ClothingStoreDB.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

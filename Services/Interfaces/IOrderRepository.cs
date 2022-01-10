@@ -12,7 +12,7 @@ namespace Services.Interfaces
     public interface IOrderRepository: IDisposable
     {
         
-        Task<List<OrderCustomer>> GetAllOrdersAsync();
+       Task <List<OrderCustomer>> GetAllOrdersAsync();
         Task<Order> InsertNewOrderAsync( int quantity,DateTime orderdate,
                                                DateTime sendingOrder, int employee, Order.ProductCategory productCategory, double totalPrice,
                                             Dictionary<int, int> orderProduct);

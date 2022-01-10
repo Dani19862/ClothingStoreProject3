@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.EntityFrameworkCore.Design.3.1.20\build\net461\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.20\build\net461\Microsoft.EntityFrameworkCore.Design.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0F22CBA-A4EF-45AF-9ECA-3D6383D5B382}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0-rc.2.21480.5\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=1.13.20136.2, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.1.1.3\lib\net46\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.3.1.20\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.20\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Design, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Design.3.1.20\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.20\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.SqlServer.3.1.20\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.6.0.0-rc.2.21480.5\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0-rc.2.21480.5\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.20.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.20\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=3.0.8.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.3.0.8\lib\net45\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.5.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.5.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.5.5.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.5.5.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Context, Version=5.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Context.5.1.2\lib\net461\Nito.AsyncEx.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Tasks, Version=5.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Tasks.5.1.2\lib\net461\Nito.AsyncEx.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Disposables, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.Disposables.2.2.1\lib\net461\Nito.Disposables.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.5.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0-rc.2.21480.5\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClothingStoreDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet122Products.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet122Products.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet12Orders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet12Orders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet12OrdersEdit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet12OrdersEdit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet12ProductsN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet12ProductsN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSetNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSetNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSetNewOrders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSetNewOrders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSetProductsNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSetProductsNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClothingStoreDBDataSetUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingStoreDBDataSetUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CusrtomersAndOrders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CusrtomersAndOrders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAndOrers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerAndOrers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__EFMigrationsHistory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersCustomersNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersCustomersNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Products.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductsNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddCustomerScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddCustomerScreen.Designer.cs">
+      <DependentUpon>AddCustomerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOrderScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOrderScreen.Designer.cs">
+      <DependentUpon>AddOrderScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddProductScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddProductScreen.Designer.cs">
+      <DependentUpon>AddProductScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChangePasswordScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChangePasswordScreen.Designer.cs">
+      <DependentUpon>ChangePasswordScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeleteCustomerScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteCustomerScreen.Designer.cs">
+      <DependentUpon>DeleteCustomerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomersListScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomersListScreen.Designer.cs">
+      <DependentUpon>CustomersListScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeleteOrderScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteOrderScreen.Designer.cs">
+      <DependentUpon>DeleteOrderScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditCustomersScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditCustomersScreen.Designer.cs">
+      <DependentUpon>EditCustomersScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditOrderScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditOrderScreen.Designer.cs">
+      <DependentUpon>EditOrderScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Entry.Designer.cs">
+      <DependentUpon>Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomersAndOrdersScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomersAndOrdersScreen.Designer.cs">
+      <DependentUpon>CustomersAndOrdersScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderDetails.Designer.cs">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrdersListScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrdersListScreen.Designer.cs">
+      <DependentUpon>OrdersListScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductsScreen.Designer.cs">
+      <DependentUpon>ProductsScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AddCustomerScreen.resx">
+      <DependentUpon>AddCustomerScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOrderScreen.resx">
+      <DependentUpon>AddOrderScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddProductScreen.resx">
+      <DependentUpon>AddProductScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChangePasswordScreen.resx">
+      <DependentUpon>ChangePasswordScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteCustomerScreen.resx">
+      <DependentUpon>DeleteCustomerScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteOrderScreen.resx">
+      <DependentUpon>DeleteOrderScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditCustomersScreen.resx">
+      <DependentUpon>EditCustomersScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditOrderScreen.resx">
+      <DependentUpon>EditOrderScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomersAndOrdersScreen.resx">
+      <DependentUpon>CustomersAndOrdersScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomersListScreen.resx">
+      <DependentUpon>CustomersListScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Entry.resx">
+      <DependentUpon>Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrdersListScreen.resx">
+      <DependentUpon>OrdersListScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductsScreen.resx">
+      <DependentUpon>ProductsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClothingStoreDBDataSet.xsc">
+      <DependentUpon>ClothingStoreDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClothingStoreDBDataSet1.xsc">
+      <DependentUpon>ClothingStoreDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet1.xss">
+      <DependentUpon>ClothingStoreDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet10.xsc">
+      <DependentUpon>ClothingStoreDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet10.xss">
+      <DependentUpon>ClothingStoreDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet11.xsc">
+      <DependentUpon>ClothingStoreDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet11.xss">
+      <DependentUpon>ClothingStoreDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet122Products.xsc">
+      <DependentUpon>ClothingStoreDBDataSet122Products.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet122Products.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet122Products.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet122Products.xss">
+      <DependentUpon>ClothingStoreDBDataSet122Products.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet12Orders.xsc">
+      <DependentUpon>ClothingStoreDBDataSet12Orders.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet12Orders.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet12Orders.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet12Orders.xss">
+      <DependentUpon>ClothingStoreDBDataSet12Orders.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet12OrdersEdit.xsc">
+      <DependentUpon>ClothingStoreDBDataSet12OrdersEdit.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet12OrdersEdit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet12OrdersEdit.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet12OrdersEdit.xss">
+      <DependentUpon>ClothingStoreDBDataSet12OrdersEdit.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet12ProductsN.xsc">
+      <DependentUpon>ClothingStoreDBDataSet12ProductsN.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet12ProductsN.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet12ProductsN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet12ProductsN.xss">
+      <DependentUpon>ClothingStoreDBDataSet12ProductsN.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet2.xsc">
+      <DependentUpon>ClothingStoreDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet2.xss">
+      <DependentUpon>ClothingStoreDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet3.xsc">
+      <DependentUpon>ClothingStoreDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet3.xss">
+      <DependentUpon>ClothingStoreDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet41.xsc">
+      <DependentUpon>ClothingStoreDBDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet41.xss">
+      <DependentUpon>ClothingStoreDBDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet5.xsc">
+      <DependentUpon>ClothingStoreDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet5.xss">
+      <DependentUpon>ClothingStoreDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet6.xsc">
+      <DependentUpon>ClothingStoreDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet6.xss">
+      <DependentUpon>ClothingStoreDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet7.xsc">
+      <DependentUpon>ClothingStoreDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet7.xss">
+      <DependentUpon>ClothingStoreDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet8.xsc">
+      <DependentUpon>ClothingStoreDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet8.xss">
+      <DependentUpon>ClothingStoreDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet9.xsc">
+      <DependentUpon>ClothingStoreDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSet9.xss">
+      <DependentUpon>ClothingStoreDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSetNew.xsc">
+      <DependentUpon>ClothingStoreDBDataSetNew.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSetNew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSetNew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSetNew.xss">
+      <DependentUpon>ClothingStoreDBDataSetNew.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSetNewOrders.xsc">
+      <DependentUpon>ClothingStoreDBDataSetNewOrders.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSetNewOrders.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSetNewOrders.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSetNewOrders.xss">
+      <DependentUpon>ClothingStoreDBDataSetNewOrders.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSetProductsNew.xsc">
+      <DependentUpon>ClothingStoreDBDataSetProductsNew.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSetProductsNew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSetProductsNew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSetProductsNew.xss">
+      <DependentUpon>ClothingStoreDBDataSetProductsNew.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSetUser.xsc">
+      <DependentUpon>ClothingStoreDBDataSetUser.xsd</DependentUpon>
+    </None>
+    <None Include="ClothingStoreDBDataSetUser.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClothingStoreDBDataSetUser.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClothingStoreDBDataSetUser.xss">
+      <DependentUpon>ClothingStoreDBDataSetUser.xsd</DependentUpon>
+    </None>
+    <None Include="CusrtomersAndOrders.xsc">
+      <DependentUpon>CusrtomersAndOrders.xsd</DependentUpon>
+    </None>
+    <None Include="CusrtomersAndOrders.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CusrtomersAndOrders.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CusrtomersAndOrders.xss">
+      <DependentUpon>CusrtomersAndOrders.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerAndOrers.xsc">
+      <DependentUpon>CustomerAndOrers.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerAndOrers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerAndOrers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerAndOrers.xss">
+      <DependentUpon>CustomerAndOrers.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="NewDataSet.xsc">
+      <DependentUpon>NewDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewDataSet.xss">
+      <DependentUpon>NewDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersCustomersNew.xsc">
+      <DependentUpon>OrdersCustomersNew.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersCustomersNew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersCustomersNew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersCustomersNew.xss">
+      <DependentUpon>OrdersCustomersNew.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Products.xsc">
+      <DependentUpon>Products.xsd</DependentUpon>
+    </None>
+    <None Include="Products.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Products.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Products.xss">
+      <DependentUpon>Products.xsd</DependentUpon>
+    </None>
+    <None Include="ProductsNew.xsc">
+      <DependentUpon>ProductsNew.xsd</DependentUpon>
+    </None>
+    <None Include="ProductsNew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductsNew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductsNew.xss">
+      <DependentUpon>ProductsNew.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Orders.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.DataAccssesLayer.ClothingStoreDB.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\חנות בגדים.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\ordersIcon.jpg" />
+    <None Include="Resources\logout2.jpg" />
+    <None Include="Resources\logout.jpg" />
+    <None Include="Resources\search1.jpg" />
+    <None Include="Resources\search.jpg" />
+    <None Include="Resources\products1.jpg" />
+    <None Include="Resources\products.jpg" />
+    <None Include="Resources\password3.jpeg" />
+    <None Include="Resources\username3.jpeg" />
+    <None Include="Resources\password2.jpeg" />
+    <None Include="Resources\UserName2.jpeg" />
+    <None Include="Resources\password.jpeg" />
+    <None Include="Resources\username.jpeg" />
+    <None Include="Resources\login-icon.jpg" />
+    <None Include="Resources\customerIcon.jpg" />
+    <None Include="Resources\customer2.jpg" />
+    <None Include="Resources\email.jpg" />
+    <Content Include="Resources\loginImage.jpeg" />
+    <None Include="Resources\loginImage1.jpeg" />
+    <Content Include="Resources\loginImg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccessLayer.csproj">
+      <Project>{f80ffd96-f3b8-43e4-b699-0ce397c41f99}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{bd3acc12-7000-4296-a00c-f5f71b138e99}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{B0362452-449D-4117-BC80-C5CD47B1716B}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.20\build\net461\Microsoft.EntityFrameworkCore.Design.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.EntityFrameworkCore.Design.3.1.20\build\net461\Microsoft.EntityFrameworkCore.Design.props'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
+</Project>
